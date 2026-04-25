@@ -15,6 +15,55 @@
   --color-forest-text: #5C715C;
 }
 
-body {
-  @apply antialiased bg-sage-bg text-forest-dark;
+@layer base {
+  html, body {
+    @apply overflow-x-hidden max-w-full m-0 p-0;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply antialiased bg-sage-bg text-forest-dark min-h-screen flex flex-col;
+    font-size: clamp(14px, 1.2vw, 18px);
+  }
+
+  h1 {
+    font-size: clamp(1.5rem, 8vw, 3.5rem);
+  }
+  
+  h2 {
+    font-size: clamp(1.25rem, 6vw, 2.75rem);
+  }
+
+  h3 {
+    font-size: clamp(1.125rem, 5vw, 2.25rem);
+  }
+}
+
+.urdu-text {
+  line-height: 2.2;
+  direction: rtl;
+}
+
+/* Custom scrollbar for better feel across devices */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-forest-primary);
+  border-radius: 10px;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.float-animation {
+  animation: float 6s ease-in-out infinite;
 }
