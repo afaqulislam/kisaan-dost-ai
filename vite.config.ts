@@ -16,6 +16,10 @@ export default defineConfig(({mode}) => {
       },
     },
     server: {
+      allowedHosts: [
+        "kisan-dost-agriculture-expert-1055174968017.asia-southeast1.run.app",
+        "all"
+      ],
       // HMR is disabled in AI Studio via DISABLE_HMR env var.
       // Do not modifyâfile watching is disabled to prevent flickering during agent edits.
       hmr: process.env.DISABLE_HMR !== 'true',
