@@ -107,6 +107,7 @@ Deployment      →  Google Cloud Run (asia-southeast1)
 
 ```
 kisaan-dost-ai/
+├── Dockerfile           # Optimized containerization for Google Cloud Run
 ├── server.ts           # Express backend — API proxy + Vite HMR integration
 ├── src/
 │   ├── App.tsx         # Main app — Diagnosis Engine, TTS, State Machine, UI
@@ -206,6 +207,8 @@ npm run build
 
 ## ☁️ Deployment — Google Cloud Run
 
+The application is containerized using **Docker** and deployed on **Google Cloud Run** for high availability and low latency in Pakistan.
+
 ```bash
 gcloud run deploy kisaan-dost \
   --source . \
@@ -215,6 +218,20 @@ gcloud run deploy kisaan-dost \
   --set-env-vars GEMINI_API_KEY=your_key_here \
   --memory 512Mi \
   --port 8080
+```
+
+---
+
+## 🐳 Docker (Local Deployment)
+
+To run the application locally using Docker:
+
+```bash
+# 1. Build image locally
+docker build -t kisaan-dost-ai .
+
+# 2. Run locally
+docker run -p 8080:8080 -e GEMINI_API_KEY=your_key kisaan-dost-ai
 ```
 
 ---
