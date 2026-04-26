@@ -17,7 +17,7 @@ export default defineConfig(({mode}) => {
     },
     server: {
       allowedHosts: [
-        "kisan-dost-agriculture-expert-1055174968017.asia-southeast1.run.app",
+        "kisaan-dost-ai-1055174968017.asia-southeast1.run.app",
         "all"
       ],
       // HMR is disabled in AI Studio via DISABLE_HMR env var.

@@ -12,7 +12,7 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-4.0-06B6D4?style=flat-square&logo=tailwindcss)](https://tailwindcss.com)
 [![Google Cloud Run](https://img.shields.io/badge/Deployed%20on-Cloud%20Run-4285F4?style=flat-square&logo=google-cloud)](https://cloud.google.com/run)
 [![AI Seekho 2026](https://img.shields.io/badge/Google-AI%20Seekho%202026-EA4335?style=flat-square&logo=google)](https://aiseekho.google)
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Click%20Here%20🚀-2d6a4f?style=flat-square)](https://kisan-dost-agriculture-expert-1055174968017.asia-southeast1.run.app/)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Click%20Here%20🚀-2d6a4f?style=flat-square)](https://kisaan-dost-ai-1055174968017.asia-southeast1.run.app/)
 
 </div>
 
@@ -20,7 +20,7 @@
 
 ## 🚀 Live Demo
 
-> **Try it now:** [https://kisan-dost-agriculture-expert-1055174968017.asia-southeast1.run.app/](https://kisan-dost-agriculture-expert-1055174968017.asia-southeast1.run.app/)
+> **Try it now:** [https://kisaan-dost-ai-1055174968017.asia-southeast1.run.app/](https://kisaan-dost-ai-1055174968017.asia-southeast1.run.app/)
 
 Deployed on **Google Cloud Run** — `asia-southeast1` region for fastest access from Pakistan.
 
@@ -210,13 +210,13 @@ npm run build
 The application is containerized using **Docker** and deployed on **Google Cloud Run** for high availability and low latency in Pakistan.
 
 ```bash
-gcloud run deploy kisaan-dost \
+gcloud run deploy kisaan-dost-ai \
   --source . \
-  --platform managed \
+  --project kisaan-dost-ai \
   --region asia-southeast1 \
   --allow-unauthenticated \
   --set-env-vars GEMINI_API_KEY=your_key_here \
-  --memory 512Mi \
+  --memory 1Gi \
   --port 8080
 ```
 
